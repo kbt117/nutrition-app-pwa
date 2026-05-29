@@ -5,9 +5,9 @@
   "display": "standalone",
   "name": "Eat Well",
   "orientation": "any",
-  "scope": "https://shimmering-gecko-449cdc.netlify.app/",
+  "scope": "/",
   "short_name": "Eat Well",
-  "start_url": "https://shimmering-gecko-449cdc.netlify.app/",
+  "start_url": "/",
   "theme_color": "#2ec6fe",
   "categories": [
     "food",
