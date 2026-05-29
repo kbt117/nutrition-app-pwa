@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "NutriScan — Food Nutrition Lookup",
   description:
     "Search any food to get detailed nutrition facts including sodium, sugar, fat breakdown, GMO & organic info.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
