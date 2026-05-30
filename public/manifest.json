@@ -9,9 +9,7 @@
   "short_name": "Eat Well",
   "start_url": "/",
   "theme_color": "#2ec6fe",
-  "categories": [
-    "food",
-    "health"
+  "categories": ["food", "health"],
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
@@ -28,5 +26,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
   ]
 }
