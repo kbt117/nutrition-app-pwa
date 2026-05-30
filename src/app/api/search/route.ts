@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { db } from "@/db";
+import { getDb } from "@/db";
 import { searchHistory } from "@/db/schema";
 
 const USDA_API_BASE = "https://api.nal.usda.gov/fdc/v1";
@@ -38,6 +38,7 @@ export async function GET(request: NextRequest) {
 
     // Log search to history
     try {
+      const db = getDb();
       await db.insert(searchHistory).values({
         query: query.trim(),
         resultCount: data.totalHits || 0,
