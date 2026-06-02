@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { getDb } from "@/db";
+import { db } from "@/db";
 import { searchHistory } from "@/db/schema";
 
 const USDA_API_BASE = "https://api.nal.usda.gov/fdc/v1";
