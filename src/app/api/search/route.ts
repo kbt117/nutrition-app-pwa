@@ -38,7 +38,6 @@ export async function GET(request: NextRequest) {
 
     // Log search to history
     try {
-      const db = getDb();
       await db.insert(searchHistory).values({
         query: query.trim(),
         resultCount: data.totalHits || 0,
