@@ -74,7 +74,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "oklch(0.268 0.011 36.5)" }}>
+    <div className="flex flex-col min-h-screen" style={{ backgroundColor: "oklch(0.268 0.011 36.5)" }}>
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
@@ -85,7 +85,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 w-full">
         {/* Hero / Search */}
         <section className="text-center py-10 sm:py-14">
           <p className="text-4xl sm:text-5xl">🌎🥗🍏</p>
