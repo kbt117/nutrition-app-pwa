@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description:
     "Search any food to get detailed nutrition facts including sodium, sugar, fat breakdown, and daily value percentages.",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/icons/icon-192x192.png",
+    apple: "/icons/icon-192x192.png",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
