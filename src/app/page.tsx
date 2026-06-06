@@ -76,7 +76,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen" style={{ backgroundColor: "oklch(0.268 0.011 36.5)" }}>
       {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200/60">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-emerald-700/40 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
           <span className="text-xl sm:text-2xl">🥗</span>
           <h1 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
