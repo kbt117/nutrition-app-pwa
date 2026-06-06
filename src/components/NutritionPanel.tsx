@@ -7,7 +7,7 @@ interface NutritionPanelProps {
   food: FoodItem;
 }
 
-type ServingMode = "100g" | "servings" | "custom_grams";
+type ServingMode = "servings" | "custom_grams";
 
 function getDvPercent(
   nutrientKey: string,
@@ -172,8 +172,6 @@ export default function NutritionPanel({ food }: NutritionPanelProps) {
   // Calculate multiplier: all USDA search data is per 100g
   const getMultiplier = (): number => {
     switch (servingMode) {
-      case "100g":
-        return 1;
       case "servings":
         return (currentPortionGrams * servingCount) / 100;
       case "custom_grams":
@@ -187,11 +185,9 @@ export default function NutritionPanel({ food }: NutritionPanelProps) {
   const n = food.nutrients;
 
   const effectiveGrams =
-    servingMode === "100g"
-      ? 100
-      : servingMode === "servings"
-        ? currentPortionGrams * servingCount
-        : customGrams;
+    servingMode === "servings"
+      ? currentPortionGrams * servingCount
+      : customGrams;
 
   return (
     <div className="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden">
@@ -216,16 +212,6 @@ export default function NutritionPanel({ food }: NutritionPanelProps) {
 
         {/* Mode tabs */}
         <div className="flex gap-1 mt-2 bg-slate-200 rounded-lg p-0.5">
-          <button
-            onClick={() => setServingMode("100g")}
-            className={`flex-1 text-xs font-medium py-1.5 rounded-md transition-all ${
-              servingMode === "100g"
-                ? "bg-white text-emerald-700 shadow-sm"
-                : "text-slate-500 hover:text-slate-700"
-            }`}
-          >
-            100g
-          </button>
           <button
             onClick={() => setServingMode("servings")}
             className={`flex-1 text-xs font-medium py-1.5 rounded-md transition-all ${
