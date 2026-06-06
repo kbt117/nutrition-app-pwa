@@ -79,7 +79,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-emerald-700/40 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
           <span className="text-xl sm:text-2xl">🥗</span>
-          <h1 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-lg sm:text-xl font-bold text-white tracking-tight">
             Eat Well
           </h1>
         </div>
