@@ -272,7 +272,7 @@ export default function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-emerald-500 bg-emerald-700/40 backdrop-blur-sm">
+      <footer className="border-t border-emerald-500 bg-emerald-700/40 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-center">
           <p className="text-xs text-emerald-100">
             Data from USDA FoodData Central · Built with Next.js
