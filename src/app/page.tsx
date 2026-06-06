@@ -74,7 +74,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-emerald-50/30">
+    <div className="min-h-screen" style={{ backgroundColor: "oklch(0.268 0.011 36.5)" }}>
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
@@ -89,10 +89,10 @@ export default function HomePage() {
         {/* Hero / Search */}
         <section className="text-center py-10 sm:py-14">
           <p className="text-4xl sm:text-5xl">🌎🥗🍏</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-3">
             Find Nutrition Info
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 max-w-xl mx-auto">
+          <p className="mt-3 text-base sm:text-lg text-emerald-50 max-w-xl mx-auto">
             Search any food to get detailed nutrition facts including sodium,
             sugar, fat breakdown, GMO &amp; organic info
           </p>
@@ -112,7 +112,7 @@ export default function HomePage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search foods... (e.g. chicken breast, avocado)"
-                className="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-slate-300 bg-white text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 shadow-sm transition-all"
+                className="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-slate-300 bg-white text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"
               />
               <svg
                 className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"
@@ -130,7 +130,7 @@ export default function HomePage() {
               <button
                 type="submit"
                 disabled={loading || !query.trim()}
-                className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-sm"
+                className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <span className="flex items-center gap-1">
@@ -177,7 +177,7 @@ export default function HomePage() {
                 <button
                   key={suggestion}
                   onClick={() => handleSuggestion(suggestion)}
-                  className="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs text-slate-600 font-medium hover:border-emerald-300 hover:text-emerald-700 hover:bg-emerald-50 transition-all shadow-sm"
+                  className="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs text-slate-600 font-medium hover:border-emerald-300 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
                 >
                   {suggestion}
                 </button>
@@ -220,13 +220,13 @@ export default function HomePage() {
         {/* Results */}
         {results && !loading && (
           <section className="pb-16">
-            <p className="text-sm text-slate-500 mb-4">
+            <p className="text-sm text-emerald-50 mb-4">
               Found{" "}
-              <span className="font-semibold text-slate-700">
+              <span className="font-semibold text-white">
                 {results.totalHits.toLocaleString()}
               </span>{" "}
               results for &ldquo;
-              <span className="font-medium text-slate-700">
+              <span className="font-medium text-white">
                 {results.query}
               </span>
               &rdquo;
@@ -235,7 +235,7 @@ export default function HomePage() {
             {results.foods.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-4xl mb-3">🔍</p>
-                <p className="text-slate-500">
+                <p className="text-emerald-100">
                   No foods found. Try a different search term.
                 </p>
               </div>
@@ -258,8 +258,8 @@ export default function HomePage() {
                   {selectedFood ? (
                     <NutritionPanel food={selectedFood} />
                   ) : (
-                    <div className="flex items-center justify-center h-64 rounded-2xl border-2 border-dashed border-slate-200">
-                      <p className="text-slate-400 text-sm">
+                    <div className="flex items-center justify-center h-64 rounded-2xl border-2 border-dashed border-emerald-400/50">
+                      <p className="text-emerald-100 text-sm">
                         Select a food to view nutrition details
                       </p>
                     </div>
@@ -272,9 +272,9 @@ export default function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white/60 backdrop-blur-sm mt-auto">
+      <footer className="border-t border-emerald-500 bg-emerald-700/40 backdrop-blur-sm mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-center">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-emerald-100">
             Data from USDA FoodData Central · Built with Next.js
           </p>
         </div>
